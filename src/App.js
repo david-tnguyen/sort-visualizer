@@ -1,26 +1,47 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import './App.scss';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+class App extends React.Component {
+  render() {
+    return (
+      <header className="app">
+        <nav className="nav">
+          <ul className="nav__menu">
+            <li className="nav__menu-item">
+              <a>Speed</a>
+            </li>
+            <li
+              className="nav__menu-item"
+            >
+              <a>Sorting Algorithms</a>
+              <Submenu />
+            </li>
+            <li className="nav__menu-item">
+              <a>Size</a>
+            </li>
+          </ul>
+        </nav>
       </header>
-    </div>
-  );
+    )
+  }
+}
+
+class Submenu extends React.Component {
+  render() {
+    return (
+      <ul className="nav__submenu">
+        <li className="nav__submenu-item ">
+          <a>Bubble</a>
+        </li>
+        <li className="nav__submenu-item ">
+          <a>Quick</a>
+        </li>
+        <li className="nav__submenu-item ">
+          <a>Merge</a>
+        </li>
+      </ul>
+    )
+  }
 }
 
 export default App;
