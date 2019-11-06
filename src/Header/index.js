@@ -4,6 +4,23 @@ import './header.scss';
 class Header extends React.Component {
   constructor(props) {
     super(props);
+    this.state = {
+      openSubmenu: ''
+    };
+    this.handleOpen = this.handleOpen.bind(this);
+    this.handleBlur = this.handleBlur.bind(this);
+  }
+
+  handleOpen() {
+    this.setState({
+      openSubmenu: 'open'
+    })
+  }
+
+  handleBlur() {
+    this.setState({
+      openSubmenu: ''
+    })
   }
 
   render() {
@@ -13,10 +30,12 @@ class Header extends React.Component {
           <ul className="nav__menu">
             <li
               className="nav__menu-item"
-              onClick={() => console.log('clicked')}
+              tabIndex="1"
+              onClick={this.handleOpen}
+              onBlur={this.handleBlur}
             >
               <a>Sorting Algorithms</a>
-              <Submenu />
+              <Submenu openSubmenu={this.state.openSubmenu}/>
             </li>
             <li className="nav__menu-item">
               <a>Speed</a>
@@ -32,9 +51,15 @@ class Header extends React.Component {
 }
 
 class Submenu extends React.Component {
+  constructor(props) {
+    super(props);
+  }
+
   render() {
     return (
-      <ul className="nav__submenu open" onClick={() => console.log('clicked')}>
+      <ul
+        className={`nav__submenu ${this.props.openSubmenu}`}
+      >
         <li className="nav__submenu-item ">
           <a>Bubble</a>
         </li>

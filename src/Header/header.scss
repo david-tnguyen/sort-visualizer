@@ -46,6 +46,9 @@ nav {
     //   display: block;
     // }
   }
+  &:focus {
+    outline: none;
+  }
 }
 
 .nav__submenu {
