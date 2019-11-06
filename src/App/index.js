@@ -1,55 +1,15 @@
 import React, { Fragment } from 'react';
 import './App.scss';
-import '../TutorialModal';
+import Header from '../Header';
 import TutorialModal from '../TutorialModal';
 
 class App extends React.Component {
-  constructor(props) {
-    super(props);
-  }
-
   render() {
     return (
       <React.Fragment>
         <TutorialModal />
-      
-        <header className="app">
-          <nav className="nav">
-            <ul className="nav__menu">
-              <li className="nav__menu-item">
-                <a>Speed</a>
-              </li>
-              <li
-                className="nav__menu-item"
-              >
-                <a>Sorting Algorithms</a>
-                <Submenu />
-              </li>
-              <li className="nav__menu-item">
-                <a>Size</a>
-              </li>
-            </ul>
-          </nav>
-        </header>
+        <Header />
       </React.Fragment>
-    )
-  }
-}
-
-class Submenu extends React.Component {
-  render() {
-    return (
-      <ul className="nav__submenu">
-        <li className="nav__submenu-item ">
-          <a>Bubble</a>
-        </li>
-        <li className="nav__submenu-item ">
-          <a>Quick</a>
-        </li>
-        <li className="nav__submenu-item ">
-          <a>Merge</a>
-        </li>
-      </ul>
     )
   }
 }
