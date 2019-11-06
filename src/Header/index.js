@@ -11,7 +11,10 @@ class Header extends React.Component {
       <header className="app">
         <nav className="nav">
           <ul className="nav__menu">
-            <li className="nav__menu-item">
+            <li
+              className="nav__menu-item"
+              onClick={() => console.log('clicked')}
+            >
               <a>Sorting Algorithms</a>
               <Submenu />
             </li>
@@ -31,7 +34,7 @@ class Header extends React.Component {
 class Submenu extends React.Component {
   render() {
     return (
-      <ul className="nav__submenu">
+      <ul className="nav__submenu open" onClick={() => console.log('clicked')}>
         <li className="nav__submenu-item ">
           <a>Bubble</a>
         </li>

@@ -1,13 +1,3 @@
-.nav__submenu {
-  display: none;
-}
-
-.nav__menu-item:hover {
-  .nav__submenu {
-    display: block;
-  }
-}
-
 $color-blue: #00aeef;
 $color-blue-dark: #0d2035;
 
@@ -52,20 +42,23 @@ nav {
   &:hover {
     background-color: $color-blue;
 
-    .nav__submenu {
-      display: block;
-    }
+    // .nav__submenu {
+    //   display: block;
+    // }
   }
 }
 
 .nav__submenu {
-  margin-top: 2px;
   font-weight: 300;
   text-transform: none;
   display: none;
   position: absolute;
   width: 120%;
   background-color: $color-blue;
+}
+
+.open {
+  display: block;
 }
 
 .nav__submenu-item {

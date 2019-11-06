@@ -7,7 +7,7 @@ class App extends React.Component {
   render() {
     return (
       <React.Fragment>
-        <TutorialModal />
+        {/* <TutorialModal /> */}
         <Header />
       </React.Fragment>
     )
