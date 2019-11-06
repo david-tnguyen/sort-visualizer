@@ -12,6 +12,7 @@
   width: 40%;
   height: 65%;
   text-align: center;
+  box-shadow: rgba(0, 0, 0, 0.2) 0px 1px 10px 0px;
 
   h2 {
     font-weight: 600;
@@ -49,4 +50,13 @@ button {
   cursor: pointer;
   margin: 15px;
   width: 150px;
+}
+
+.modalBackdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background-color: rgba(255, 255, 255, 0.8);
 }
