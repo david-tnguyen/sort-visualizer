@@ -1,27 +1,37 @@
-import React from 'react';
+import React, { Fragment } from 'react';
 import './App.scss';
+import '../TutorialModal';
+import TutorialModal from '../TutorialModal';
 
 class App extends React.Component {
+  constructor(props) {
+    super(props);
+  }
+
   render() {
     return (
-      <header className="app">
-        <nav className="nav">
-          <ul className="nav__menu">
-            <li className="nav__menu-item">
-              <a>Speed</a>
-            </li>
-            <li
-              className="nav__menu-item"
-            >
-              <a>Sorting Algorithms</a>
-              <Submenu />
-            </li>
-            <li className="nav__menu-item">
-              <a>Size</a>
-            </li>
-          </ul>
-        </nav>
-      </header>
+      <React.Fragment>
+        <TutorialModal />
+      
+        <header className="app">
+          <nav className="nav">
+            <ul className="nav__menu">
+              <li className="nav__menu-item">
+                <a>Speed</a>
+              </li>
+              <li
+                className="nav__menu-item"
+              >
+                <a>Sorting Algorithms</a>
+                <Submenu />
+              </li>
+              <li className="nav__menu-item">
+                <a>Size</a>
+              </li>
+            </ul>
+          </nav>
+        </header>
+      </React.Fragment>
     )
   }
 }
