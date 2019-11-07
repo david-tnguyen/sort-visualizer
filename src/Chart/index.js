@@ -1,7 +1,7 @@
 import React from 'react';
 import './chart.scss';
 
-const data = [2, 22, 10];
+const data = [2, 22, 10, 42, 4, 15, 10, 32, 25, 46, 40, 4, 12, 14, 24, 20, 35, 40];
 
 const barWidth = 50;
 const barPadding = 5;
@@ -17,7 +17,7 @@ export default class Chart extends React.Component {
   render() {
     return (
       <div className="chartWrapper">
-        <svg className="chart">
+        <svg height="650" width="1000">
           {data.map((num, idx) => (
             <g transform={`translate(${idx * (barWidth + barPadding)},${maxHeight - (num * barRatio)})`}>
               <rect
