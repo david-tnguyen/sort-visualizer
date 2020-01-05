@@ -1,8 +1,8 @@
 import React from 'react';
 import './chart.scss';
+import insertionSort from '../InsertionSort';
 
 const data = [2, 22, 10, 42, 4, 15, 10, 32, 25, 46, 40, 4, 12, 14, 24, 20, 35, 40];
-
 const barWidth = 50;
 const barPadding = 5;
 const barRatio = 7.5;
@@ -19,7 +19,7 @@ export default class Chart extends React.Component {
       <div className="chartWrapper">
         <svg height="650" width="1000">
           {data.map((num, idx) => (
-            <g transform={`translate(${idx * (barWidth + barPadding)},${maxHeight - (num * barRatio)})`}>
+            <g key={idx} transform={`translate(${idx * (barWidth + barPadding)},${maxHeight - (num * barRatio)})`}>
               <rect
                 style={{ width: `${barWidth}px`, height: `${num * barRatio}px`}}
                 className="rectangle"

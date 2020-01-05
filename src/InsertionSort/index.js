@@ -1,4 +1,4 @@
-const insertionSort = (arr) => {
+export default (arr) => {
   for (let i = 1; i < arr.length; i++) {
     const temp = arr[i];
     let j = i - 1;
@@ -12,5 +12,3 @@ const insertionSort = (arr) => {
 
   return arr;
 };
-
-console.log(insertionSort([5, 4, 20, 2, 4, 1, 40]));
